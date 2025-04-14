@@ -1,0 +1,55 @@
+import {Schema, model, Document, ObjectId} from 'mongoose';
+
+interface IUser extends Document {
+    username: string;
+    email: string;
+    thoughts: ObjectId[];
+    friends: ObjectId[];
+}
+
+const userSchema = new Schema<IUser>(
+    {
+        username: {
+            type: String,
+            required: true,
+            unique: true,
+            trim: true,
+          },
+          email: {
+            type: String,
+            required: true,
+            unique: true,
+            match: [
+              /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/,
+              'Please fill a valid email address',
+            ],
+          },
+        thoughts: [
+            {
+                type: Schema.Types.ObjectId,
+                ref: 'Thought',
+            },
+        ],
+        friends: [
+            {
+                type: Schema.Types.ObjectId,
+                ref: 'User',
+            },
+        ],
+        
+    },
+    {
+        toJSON: {
+            virtuals: true,
+        },
+        id: false,
+    }
+);
+userSchema.virtual('friendCount').get(function (this: IUser) {
+    return this.friends.length;
+});
+
+// initialize the model
+const User = model('User', userSchema);
+// export model
+export default User;

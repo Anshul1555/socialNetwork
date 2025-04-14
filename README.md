@@ -30,7 +30,7 @@ A backend RESTful API for a social network web application that enables users to
 1. **Clone the Repository**
 
 ```bash
-git clone https://github.com/anshul1555/social-network-api.git
+git clone https://github.com/Anshul1555/socialNetwork.git
 cd social-network-api
 ```
 

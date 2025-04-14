@@ -134,4 +134,7 @@ There is no frontend for this application. All interactions happen through API r
 🔒 Currently: No authentication is implemented.
 
 ### 🎥 Walkthrough Video
+This video contains a demo of all the API's
+https://github.com/user-attachments/assets/b2e316e8-39ed-4acf-b2f0-bc71c5053091
+
 ````

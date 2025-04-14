@@ -44,8 +44,9 @@ npm install
 
 4.Run the Server
 
-````bash
-npm start```
+```bash
+npm start
+```
 
 ## 🚀 Usage
 
@@ -135,6 +136,6 @@ There is no frontend for this application. All interactions happen through API r
 
 ### 🎥 Walkthrough Video
 This video contains a demo of all the API's
+
 https://github.com/user-attachments/assets/b2e316e8-39ed-4acf-b2f0-bc71c5053091
 
-````
